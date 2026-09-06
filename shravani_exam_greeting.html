@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All the Best Shravani!</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(145deg,#637be0,#75439a);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  color:white;
+}
+.card{
+  width:min(88%,650px);
+  padding:70px 35px 55px;
+  text-align:center;
+  background:rgba(255,255,255,.18);
+  border-radius:55px;
+  box-shadow:0 20px 50px rgba(30,20,80,.22);
+  backdrop-filter:blur(8px);
+  position:relative;
+}
+.books{font-size:90px;line-height:1;margin-bottom:30px}
+h1{font-size:clamp(48px,9vw,82px);margin:0 0 18px;font-weight:700}
+.name{
+  color:#ffe067;
+  font-size:clamp(34px,7vw,52px);
+  font-weight:700;
+  margin-bottom:45px;
+}
+p{
+  font-size:clamp(22px,4.5vw,34px);
+  line-height:1.55;
+  margin:18px 0;
+}
+strong{font-size:1.05em}
+button{
+  margin-top:45px;
+  border:0;
+  border-radius:60px;
+  padding:20px 55px;
+  font-size:25px;
+  color:#6650a5;
+  background:white;
+  cursor:pointer;
+  transition:.25s;
+}
+button:hover{transform:scale(1.05)}
+.confetti{
+  position:fixed;
+  top:-30px;
+  width:13px;height:32px;
+  background:white;
+  opacity:.9;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(360deg)}
+}
+#message{display:none;margin-top:25px;color:#ffe067;font-weight:bold}
+</style>
+</head>
+<body>
+
+<div class="confetti" style="left:8%;animation-duration:5s;animation-delay:0s;transform:rotate(20deg)"></div>
+<div class="confetti" style="left:24%;animation-duration:7s;animation-delay:2s;transform:rotate(-15deg)"></div>
+<div class="confetti" style="left:78%;animation-duration:6s;animation-delay:1s;transform:rotate(15deg)"></div>
+<div class="confetti" style="left:92%;animation-duration:8s;animation-delay:3s;transform:rotate(-20deg)"></div>
+
+<div class="card">
+  <div class="books">📚 ✨</div>
+  <h1>All the Best!</h1>
+  <div class="name">Shravani 🌠</div>
+
+  <p>Wishing you the very best for<br>your exams!</p>
+  <p>Stay calm, stay confident, and<br>give it your best. 💪</p>
+  <p><strong>You’ve got this! 🌟</strong></p>
+
+  <button onclick="showMessage()">Good Luck! 🎓</button>
+  <div id="message">Go rock your exams, Shravani! 💯❤️</div>
+</div>
+
+<script>
+function showMessage(){
+  document.getElementById("message").style.display="block";
+}
+</script>
+</body>
+</html>
